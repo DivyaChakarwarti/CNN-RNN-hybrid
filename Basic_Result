@@ -1,0 +1,35 @@
+Using TensorFlow backend.
+Loading the dataset with batch size of 32...
+Found 900 images belonging to 3 classes.
+Found 300 images belonging to 3 classes.
+Dataset loaded
+Building model...
+Model built
+Starting training
+WARNING:tensorflow:From <ipython-input-1-ce59a925a51b>:134: Model.fit_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.fit, which supports generators.
+1/1 [==============================] - ETA: 0s - loss: 1.1295WARNING:tensorflow:Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches (in this case, 5000 batches). You may need to use the repeat() function when building your dataset.
+
+Epoch 00001: val_loss improved from inf to 13.49358, saving model to ./initial_cnn_rnn_weights_2.hdf5
+1/1 [==============================] - 77s 77s/step - loss: 1.1295 - val_loss: 13.4936
+Initial training done, starting phase two (finetuning)
+Loading the dataset with batch size of 16...
+Found 900 images belonging to 3 classes.
+Found 300 images belonging to 3 classes.
+Dataset loaded
+DKYL1
+DKYL2
+1/1 [==============================] - ETA: 0s - accuracy: 0.3750 - loss: 11.9878 - top_k_categorical_accuracy: 1.0000WARNING:tensorflow:Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches (in this case, 5000 batches). You may need to use the repeat() function when building your dataset.
+
+Epoch 00001: val_loss improved from inf to 12.14980, saving model to ./finetuned_cnn_rnn_weights_2.hdf5
+1/1 [==============================] - 109s 109s/step - accuracy: 0.3750 - loss: 11.9878 - top_k_categorical_accuracy: 1.0000 - val_accuracy: 0.3300 - val_top_k_categorical_accuracy: 1.0000 - val_loss: 12.1498
+Training done, doing final evaluation...
+DKYL3
+DKYL4
+WARNING:tensorflow:From <ipython-input-1-ce59a925a51b>:172: Model.evaluate_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.evaluate, which supports generators.
+WARNING:tensorflow:Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches (in this case, 5000 batches). You may need to use the repeat() function when building your dataset.
+['loss', 'accuracy', 'top_k_categorical_accuracy'] [12.149800300598145, 0.33000001311302185, 1.0]
+accuracy: 33.00%

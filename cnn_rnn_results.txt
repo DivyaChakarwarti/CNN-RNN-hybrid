@@ -1,0 +1,4 @@
+Label	Top-1 Accuracy	Top-5 Accuracy
+Potato___Early_blight	100.0	100.0
+Potato___Late_blight	94.0	100.0
+Potato___healthy	100.0	100.0
